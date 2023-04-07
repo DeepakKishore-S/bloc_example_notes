@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Material App',
       home: HomePage(),
     );
@@ -20,26 +20,13 @@ class HomePage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = useTextEditingController();
-    final text = useState("");
-    useEffect(() {
-      controller.addListener(() {
-        text.value = controller.text;
-      });
-      return null;
-    },[controller]);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Title'),
-      ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            TextField(controller: controller,),
-            Text("You Typed ${text.value}")
-          ],
+        appBar: AppBar(
+          title: const Text('Material App Bar'),
         ),
-      ),
-    );
+        body: const Center(
+          child: Text('Hello World'),
+        ),
+      );
   }
 }
