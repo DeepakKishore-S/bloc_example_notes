@@ -8,14 +8,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const  MaterialApp(
       title: 'Material App',
       home: HomePage(),
     );
   }
 }
 
-Stream<String> getTime() => Stream.periodic(Duration(seconds: 1), (_) {
+Stream<String> getTime() => Stream.periodic(const Duration(seconds: 1), (_) {
       return DateTime.now().toIso8601String();
     });
 
