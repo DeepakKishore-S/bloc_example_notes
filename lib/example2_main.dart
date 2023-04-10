@@ -10,13 +10,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      home: HomePage(),
+      home: Example2Page(),
     );
   }
 }
 
-class HomePage extends HookWidget {
-  const HomePage({super.key});
+class Example2Page extends HookWidget {
+  static const String routeName = "example2";
+  const Example2Page({super.key});
 
   @override
   Widget build(BuildContext context) {

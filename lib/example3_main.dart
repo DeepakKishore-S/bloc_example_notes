@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      home: HomePage(),
+      home: Example3Page(),
     );
   }
 }
@@ -27,8 +27,9 @@ extension CompactMap<T> on Iterable<T?> {
 
 const String url = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=644&q=80";
 
-class HomePage extends HookWidget {
-  const HomePage({super.key});
+class Example3Page extends HookWidget {
+  static const String routeName = "example3";
+  const Example3Page({super.key});
 
   @override
   Widget build(BuildContext context) {

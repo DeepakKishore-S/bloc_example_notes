@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      home: HomePage(),
+      home: Example4Page(),
     );
   }
 }
@@ -36,8 +36,9 @@ class CountDown extends ValueNotifier<int> {
   }
 }
 
-class HomePage extends HookWidget {
-  const HomePage({super.key});
+class Example4Page extends HookWidget {
+  static const String routeName = "example4";
+  const Example4Page({super.key});
 
   @override
   Widget build(BuildContext context) {
