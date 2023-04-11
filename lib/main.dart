@@ -6,6 +6,7 @@ import 'example2_main.dart';
 import 'example3_main.dart';
 import 'example5_main.dart';
 import 'example6_main.dart';
+import 'example7_main.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: const Example6Page(),
+      home: const Example7Page(),
       routes: {
+        Example7Page.routeName: (context) => const Example7Page(),
         Example6Page.routeName: (context) => const Example6Page(),
         Example5Page.routeName: (context) => const Example5Page(),
         Example4Page.routeName: (context) => const Example4Page(),
