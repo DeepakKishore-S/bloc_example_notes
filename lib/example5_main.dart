@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import 'main.dart';
+
 extension Normalize on num {
   num normalize(num selfRangeMin, num selfRangeMax,
           [num normalizeMinRange = 0.0, num normalizeMaxRange = 1.0]) =>
@@ -12,7 +14,6 @@ extension Normalize on num {
 }
 
 const double imageHeight = 300.0;
-const String url = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=644&q=80";
 
 class Example5Page extends HookWidget {
   static const String routeName = "example5";
@@ -55,15 +56,19 @@ class Example5Page extends HookWidget {
             sizeFactor: size,
             axisAlignment: -1.0,
             child: FadeTransition(
-              opacity: opacity,
-              child: Image.network(url,height: imageHeight,fit: BoxFit.cover,)),
+                opacity: opacity,
+                child: Image.network(
+                  sampleImageUrl,
+                  height: imageHeight,
+                  fit: BoxFit.cover,
+                )),
           ),
           Expanded(
             child: ListView.builder(
               controller: controller,
               itemCount: 100,
               itemBuilder: (context, index) {
-              return  ListTile(
+                return ListTile(
                   title: Text("person ${index}"),
                 );
               },

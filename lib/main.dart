@@ -5,6 +5,7 @@ import 'example1_main.dart';
 import 'example2_main.dart';
 import 'example3_main.dart';
 import 'example5_main.dart';
+import 'example6_main.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: const Example5Page(),
+      home: const Example6Page(),
       routes: {
+        Example6Page.routeName: (context) => const Example6Page(),
         Example5Page.routeName: (context) => const Example5Page(),
         Example4Page.routeName: (context) => const Example4Page(),
         Example3Page.routeName: (context) => const Example3Page(),
@@ -26,6 +28,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+const String sampleImageUrl =
+    "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=644&q=80";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -63,6 +68,11 @@ class HomePage extends StatelessWidget {
               child: const Text("Example 5"),
               onPressed: () =>
                   Navigator.of(context).pushNamed(Example5Page.routeName),
+            ),
+            TextButton(
+              child: const Text("Example 6"),
+              onPressed: () =>
+                  Navigator.of(context).pushNamed(Example6Page.routeName),
             ),
           ],
         ),
